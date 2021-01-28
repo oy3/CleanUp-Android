@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.cleanup.client.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_client_home" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.example.cleanup.client.ui.history.HistoryFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_client_history" />
+
+    <fragment
+        android:id="@+id/nav_offers"
+        android:name="com.example.cleanup.client.ui.offers.OffersFragment"
+        android:label="@string/menu_offers"
+        tools:layout="@layout/fragment_client_offers" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.cleanup.client.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.cleanup.client.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+
+</navigation>
+
+<!--<fragment-->
+<!--android:id="@+id/nav_contact"-->
+<!--android:name="com.example.cleanup.client.ui.contact.ContactFragment"-->
+<!--android:label="@string/menu_send"-->
+<!--tools:layout="@layout/fragment_client_contact" />-->

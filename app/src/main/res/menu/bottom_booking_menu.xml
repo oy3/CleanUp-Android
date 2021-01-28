@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/amount"
+        android:id="@+id/action_total"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_attach_money_24dp"
+        app:showAsAction="never"
+        android:enabled="false" />
+
+    <item android:title="Confirm"
+        android:id="@+id/action_confirm"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_check_circle_24dp"/>
+</menu>

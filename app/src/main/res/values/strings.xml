@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">CleanUp</string>
+    <string name="title_activity_client">ClientActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="tap_back_to_exit">Tap back again to exit</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_history">History</string>
+    <string name="menu_offers">Offers &amp; Notification</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+    <string-array name="services_list">
+        <item></item>
+        <item>Light Clean</item>
+        <item>Deep Clean</item>
+        <item>Moving In &amp; Out</item>
+        <item>Post Construction</item>
+    </string-array>
+
+    <string-array name="frequency_list">
+        <item></item>
+        <item>One-time</item>
+        <item>Weekly</item>
+        <item>Every 2 Weeks</item>
+        <item>Every 3 Weeks</item>
+        <item>Monthly</item>
+        <item>Bimonthly</item>
+    </string-array>
+
+    <string name="amount">Total = </string>
+
+    <string name="cvv">CVV</string>
+    <string name="expiry">Expiry</string>
+    <string name="card_number">Card Number</string>
+    <string name="pay">Pay</string>
+    <string name="yy">YY</string>
+    <string name="expiry_month">MM</string>
+    <string name="email">Email</string>
+    <string name="title_activity_main3">Map</string>
+    <string name="title_activity_job">Cleaning Job</string>
+    <string name="error_input_fields">Please fill all the input fields</string>
+    <string name="go_online">Go Online</string>
+    <string name="go_offline">Go Offline</string>
+    <string name="title_activity_booking_details">Map</string>
+    <string name="title_activity_history_booking_details">Map</string>
+</resources>

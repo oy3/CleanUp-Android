@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".ui.client.history.HistoryBookingDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/track_cleaner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:text="Track Cleaner"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:backgroundTint="#d35239"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fav_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/fab_margin"-->
+<!--            android:text="Track Cleaner"-->
+<!--            app:backgroundTint="#D3D3D3"-->
+<!--            app:layout_anchor="@id/bottom_constraint"-->
+<!--            app:layout_anchorGravity="bottom|end" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottom_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/cAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="No. 19, Salaqua Street, Oshorun heritage Estate, Isheri, Lagos"
+                    map:layout_constraintEnd_toStartOf="@+id/cStatus"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#2196F3"
+                    android:padding="5dp"
+                    android:text="Confirmed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Cleaning details"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toBottomOf="@+id/cAddress" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="?android:attr/listDivider"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView6"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView6"
+                    map:layout_constraintTop_toTopOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Number of Rooms"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView6"
+                    map:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/cRooms"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView11"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView11"
+                    map:layout_constraintTop_toTopOf="@id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Number of Bathrooms"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView6"
+                    map:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/cBath"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView26"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView26"
+                    map:layout_constraintTop_toTopOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Type of Service"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView6"
+                    map:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/cType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView35"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView35"
+                    map:layout_constraintTop_toTopOf="@+id/textView35" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Frequency"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView6"
+                    map:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+                <TextView
+                    android:id="@+id/cFreq"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView37"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView37"
+                    map:layout_constraintTop_toTopOf="@+id/textView37" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Need Cleaning Product?"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView6"
+                    map:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                <TextView
+                    android:id="@+id/cNeed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView39"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView39"
+                    map:layout_constraintTop_toTopOf="@+id/textView39" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Amount"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/cAddress"
+                    map:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                <TextView
+                    android:id="@+id/cAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView41"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView41"
+                    map:layout_constraintTop_toTopOf="@+id/textView41" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedTextField9"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Special Instructions"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toStartOf="@+id/textView6"
+                    map:layout_constraintTop_toBottomOf="@+id/textView41">
+
+                    <EditText
+                        android:id="@+id/cInstruction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="none"
+                        android:lines="4"
+                        android:text="Knock before entering. Beware of Dogs!!!" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Assiged Cleaner"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toBottomOf="@+id/outlinedTextField9" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="?android:attr/listDivider"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView44"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView44"
+                    map:layout_constraintTop_toTopOf="@+id/textView44" />
+
+                <ImageView
+                    android:id="@+id/cCleanerImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@mipmap/ic_person_placeholder"
+                    map:layout_constraintStart_toStartOf="@+id/textView44"
+                    map:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+                <TextView
+                    android:id="@+id/cleanerErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Not Assigned"
+                    android:textAllCaps="true"
+                    android:textColor="#F44336"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    map:layout_constraintBottom_toTopOf="@+id/textView47"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/cCleanerImg"
+                    map:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+                <TextView
+                    android:id="@+id/cCleanerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:text="Cleaner Name"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/cCleanerImg"
+                    map:layout_constraintTop_toTopOf="@+id/cCleanerImg" />
+
+                <TextView
+                    android:id="@+id/cCleanerPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    map:layout_constraintStart_toStartOf="@+id/cCleanerName"
+                    map:layout_constraintTop_toBottomOf="@+id/cCleanerName"
+                    tools:text="+2349057391556" />
+
+                <TextView
+                    android:id="@+id/cPhoneNumberHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="(Click on phone number to call)"
+                    android:textColor="#03A9F4"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    map:layout_constraintBottom_toBottomOf="@+id/cCleanerPhone"
+                    map:layout_constraintStart_toEndOf="@+id/cCleanerPhone"
+                    map:layout_constraintTop_toTopOf="@+id/cCleanerPhone" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Cleaning Process"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toBottomOf="@+id/cCleanerImg" />
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="?android:attr/listDivider"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView47"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView47"
+                    map:layout_constraintTop_toTopOf="@+id/textView47" />
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Booked Timestamp"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView47"
+                    map:layout_constraintTop_toBottomOf="@+id/textView47" />
+
+                <TextView
+                    android:id="@+id/cBooked"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@id/textView48"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView48"
+                    map:layout_constraintTop_toTopOf="@+id/textView48" />
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Confirmed Timestamp"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView47"
+                    map:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+                <TextView
+                    android:id="@+id/cConfirmed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView50"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView50"
+                    map:layout_constraintTop_toTopOf="@+id/textView50" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Began Cleaning"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView47"
+                    map:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+                <TextView
+                    android:id="@+id/cStart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView52"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView52"
+                    map:layout_constraintTop_toTopOf="@+id/textView52" />
+
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Finished Cleaning"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView47"
+                    map:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+                <TextView
+                    android:id="@+id/cStop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView53"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/textView53"
+                    map:layout_constraintTop_toTopOf="@+id/textView53" />
+
+                <TextView
+                    android:id="@+id/cCancelTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Canclled Timestamp"
+                    android:textColor="@color/black"
+                    map:layout_constraintStart_toStartOf="@+id/textView47"
+                    map:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+                <TextView
+                    android:id="@+id/cCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="TextView"
+                    map:layout_constraintBottom_toBottomOf="@+id/cCancelTxt"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toEndOf="@+id/cCancelTxt"
+                    map:layout_constraintTop_toTopOf="@+id/cCancelTxt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

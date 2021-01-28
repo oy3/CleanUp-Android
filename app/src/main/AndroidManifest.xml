@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cleanup">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".utils.ApplicationLoader"
+        android:allowBackup="true"
+        android:icon="@mipmap/clean_up_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/clean_up_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.client.NotificationActivity"
+            android:label="Notifications"></activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.cleaner.CleanerProfileActivity"
+            android:label="My Profile"
+            android:parentActivityName=".ui.cleaner.Main3Activity" />
+        <activity
+            android:name=".ui.client.history.HistoryBookingDetailsActivity"
+            android:label="Bookings History"
+            android:parentActivityName=".ui.client.history.HistoryActivity" />
+        <activity
+            android:name=".ui.cleaner.history.HistoryDetailsActivity"
+            android:label="Booking Details"
+            android:parentActivityName=".ui.cleaner.history.CleanerHistoryActivity" />
+        <activity
+            android:name=".ui.cleaner.jobs.JobActivity"
+            android:label="@string/title_activity_job" />
+        <activity
+            android:name=".ui.cleaner.jobs.AvailableJobsActivity"
+            android:label="Available Jobs"
+            android:parentActivityName=".ui.cleaner.Main3Activity" />
+        <activity
+            android:name=".ui.cleaner.history.CleanerHistoryActivity"
+            android:label="History" />
+        <activity
+            android:name=".ui.cleaner.Main3Activity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.cleaner.ContactAdminActivity"
+            android:parentActivityName=".ui.cleaner.Main3Activity" />
+
+        <meta-data
+            android:name="co.paystack.android.PublicKey"
+            android:value="pk_test_fe167fe506747ccdf6c88ae8135a60c2e191d22e" />
+
+        <activity
+            android:name=".ui.client.BookingActivity"
+            android:parentActivityName=".ui.client.MainActivity" />
+        <activity
+            android:name=".ui.client.ContactActivity"
+            android:label="Contact Us" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.client.MainActivity" />
+        <activity
+            android:name=".ui.client.RegisterActivity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".utils.BaseActivity" />
+        <activity android:name=".ui.client.ProfileActivity" />
+        <activity
+            android:name=".ui.client.history.HistoryActivity"
+            android:label="Booking History" />
+    </application>
+
+</manifest>
